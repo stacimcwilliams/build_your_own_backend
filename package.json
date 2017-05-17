@@ -1,17 +1,20 @@
 {
-  "name": "build_your_own_backend",
+  "name": "go_global",
   "version": "1.0.0",
-  "description": "",
+  "description": "A back end for finding international volunteer oppurtunities",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node_modules/.bin/mocha ./tests/**.js || true",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Staci McWilliams",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "knex": "^0.13.0",
+    "nodemon": "^1.11.0",
     "pg": "^6.2.2"
   },
   "devDependencies": {
