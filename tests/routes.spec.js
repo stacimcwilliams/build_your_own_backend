@@ -39,7 +39,7 @@ describe('Go Global server testing', () => {
           response.should.have.status(200);
           response.should.be.json;
           response.body.should.be.a('array');
-          response.body.should.have.length(15);
+          response.body.should.have.length(30);
           response.body[0].should.have.property('name');
           response.body[0].should.have.property('url');
           done();
@@ -53,7 +53,7 @@ describe('Go Global server testing', () => {
         .get('/api/v1/locations')
         .end((error,response) => {
           response.should.have.status(200);
-          response.body.should.have.length(15);
+          response.body.should.have.length(30);
           response.should.be.json
           response.body.should.be.a('array')
           response.body[0].should.have.property('country');
@@ -94,5 +94,43 @@ describe('Go Global server testing', () => {
         })
       })
     });
+
+    describe('POST /api/v1/organizations/', () => {
+      it('should add an organization', (done) => {
+        chai.request(server)
+        .post('/api/v1/organizations')
+        .set('Authorization', process.env.TOKEN)
+        .send({
+          id: '35',
+          name: "Teach for America",
+          url: "http://www,teachforamerica.com"
+        })
+        .end((error,response) => {
+          console.log(response.body);
+          response.should.have.status(201)
+          response.body.should.be.a('object')
+          chai.request(server)
+          .get('/api/v1/organizations')
+          .end((error,response) => {
+            console.log(response.body);
+            response.should.have.status(200)
+            done()
+          });
+        });
+      })
+    }),
+
+    it('should return a 404 for a sad route', (done) => {
+    chai.request(server)
+    .get('/api/v1/organizations/sad')
+    .end((err, response) => {
+      response.should.have.status(404)
+      done()
+    })
+  })
+}),
+
+
   });
-});
+})
+// .set('Authorization', process.env.TOKEN

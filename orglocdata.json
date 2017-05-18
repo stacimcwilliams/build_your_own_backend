@@ -40,174 +40,202 @@
       "city": "St Lucia"
     },
     {
+      "id": 2,
       "organization_id": 2,
       "country": "Brazil",
       "state": "Sao Paulo",
       "city": "Sao Paulo"
     },
     {
+      "id":3,
       "organization_id": 3,
       "country": "Thailand",
       "state": "Chiang Mai Province",
       "city": "Chiang Mai"
     },
     {
+      "id": 4,
       "organization_id": 4,
       "country": "Thailand",
       "state": "Chiang Mai Province",
       "city": "Chiang Mai"
     },
     {
+      "id":5,
       "organization_id": 5,
       "country": "China",
       "state": "Beijing",
       "city": "Beijing"
     },
     {
+      "id": 6,
       "organization_id": 6,
       "country": "Belgium'",
       "state": "Bilzen",
       "city": "Tongeren"
     },
     {
+      "id": 7,
       "organization_id": 7,
       "country": "Cambodia",
       "state": "Phnom Penh",
       "city": "Phnom Penh"
     },
     {
+      "id": 8,
       "organization_id": 8,
       "country": "Colombia",
       "state": "Cundinamarca",
       "city": "Bogota"
     },
     {
+      "id":9,
       "organization_id": 9,
       "country": "Dominican Republic",
       "state": "Distrito Nacional",
       "city": "Santo Domingo"
     },
     {
+      "id": 10,
       "organization_id": 10,
       "country": "France",
       "state": "Paris",
       "city": "Paris"
     },
     {
+      "id": 11,
       "organization_id": 11,
       "country": "Germany",
       "state": "Brandenburg",
       "city": "Beeskow"
     },
     {
+      "id": 12,
       "organization_id": 12,
       "country": "Iceland",
       "state": "Reykjavík",
       "city": "Reykjavík"
     },
     {
+      "id": 13,
       "organization_id": 13,
       "country": "India",
       "state": "Maharashtra",
       "city": "Mumbai"
     },
     {
+      "id": 14,
       "organization_id": 14,
       "country": "Iraq",
       "state": "Salah ad Din",
       "city": "Ad-Dawr"
     },
-    {
+    {"id": 15,
       "organization_id": 15,
       "country": "Brazil",
       "state": "Sao Paulo",
       "city": "Sao Paulo"
     },
     {
+      "id": 16,
       "organization_id": 16,
       "country": "Japan",
       "state": "Aichi",
       "city": "kazaki"
     },
     {
+      "id": 17,
       "organization_id": 17,
       "country": "Jordan",
       "state": "Amman",
       "city": "Amman"
     },
     {
+      "id": 18,
       "organization_id": 18,
       "country": "Kenya",
       "state": "Baragoi",
       "city": "Baragoi"
     },
     {
+      "id": 19,
       "organization_id": 19,
       "country": "Lebanon",
       "state": "Beirut Governorate",
       "city": "Beirut"
     },
     {
+      "id": 20,
       "organization_id": 20,
       "country": "Myanmar",
       "state": "Yangon Region",
       "city": "Yangon"
     },
     {
+      "id": 21,
       "organization_id": 21,
       "country": "Nepal",
       "state": "Kathmandu",
       "city": "Kathmandu"
     },
     {
+      "id": 22,
       "organization_id": 22,
       "country": "New Zealand",
       "state": "Greater Wellington Regional",
       "city": "Auckland"
     },
     {
+      "id": 23,
       "organization_id": 23,
       "country": "North Korea",
       "state": "South Pyongan",
       "city": "Anju"
     },
     {
+      "id":24,
       "organization_id": 24,
       "country": "Norway",
       "state": "Aust-Agder",
       "city": "Arendal"
     },
     {
+      "id": 25,
       "organization_id": 25,
       "country": "Pakistan",
       "state": "Mardan",
       "city": "Mardan"
     },
     {
+      "id": 26,
       "organization_id": 26,
       "country": "Peru",
       "state": "Lima",
       "city": "Lima"
     },
     {
+      "id":27,
       "organization_id": 27,
       "country": "Philippines",
       "state": "Pangasinan",
       "city": "Alaminos"
     },
     {
+      "id": 28,
       "organization_id": 28,
       "country": "Romania",
       "state": "Cluj",
       "city": "Cluj-Napoca"
     },
     {
+      "id": 29,
       "organization_id": 29,
       "country": "Sweden",
       "state": "Alingsas",
       "city": "Alingsas"
     },
     {
+      "id": 30,
       "organization_id": 30,
       "country": "Uzbekistan",
       "state": "Afrasiab",
