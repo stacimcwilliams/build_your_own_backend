@@ -1,0 +1,217 @@
+{
+  "organizations": [
+    { "name": "Go Eco", "url": "https://www.goeco.org/", "id": 1 },
+    { "name": "Global Citizen Year", "url": "https://www.globalcitizenyear.org/"," id": 2 },
+    { "name": "One World 365", "url": "http://www.oneworld365.org/", "id": 3 },
+    { "name": "WWOOF", "url": "http://wwoof.net/", "id": 4 },
+    { "name": "BUNAC", "url": "https://www.bunac.org/usa", "id": 5 },
+    { "name": "American Hiking Society", "url": "https://americanhiking.org/", "id": 6 },
+    { "name": "Global Volunteers", "url": "https://globalvolunteers.org/", "id": 7 },
+    { "name": "Go Voluntouring", "url": "http://govoluntouring.com/", "id": 8 },
+    { "name": "Projects Abroad", "url": "http://www.projects-abroad.org/", "id": 9 },
+    { "name": "GeoVisions", "url": "http://geovisions.org/", "id": 10 },
+    { "name": "Cross Cultural Solutions", "url": "https://www.crossculturalsolutions.org/", "id": 11 },
+    { "name": "gvi", "url": "http://www.gviusa.com/", "id": 12 },
+    { "name": "Lead adventures", "url": "ttp://www.lead-adventures.com/", "id": 13 },
+    { "name": "ACDI", "url": "www.acdivoca.org'", "id": 14 },
+    { "name": "AMIZADE", "url": "https://amizade.org/", "id": 15 },
+    { "name": "Concern Worldwide", "url": "http://www.concernusa.org/", "id": 16 },
+    { "name": "Earthwatch Institute", "url": "http://earthwatch.org/", "id": 17 },
+    { "name": "Go Abroad", "url": "https://www.goabroad.com/", "id": 18 },
+    { "name": "Green Volunteers", "url": "http://www.greenvolunteers.org/", "id": 19 },
+    { "name": "Habitat for Humanity, International", "url": "https://www.habitat.org/volunteer/long-term-opportunities/international", "id": 20 },
+    { "name": "idealist", "url": "https://www.idealist.org/en/?type=ALL", "id": 21 },
+    { "name": "Mentor", "url": "http://www.mentoring.org/", "id": 22 },
+    { "name": "Volunteer International", "url": "http://volunteerinternational.org/", "id": 23 },
+    { "name": "Conservation Volunteers", "url": "http://conservationvolunteers.com.au/", "id": 24 },
+    { "name": "helpx", "url": "http://www.helpx.net/", "id": 25 },
+    { "name": "UN Volunteers", "url": "https://www.unv.org/", "id": 26 },
+    { "name": "Road 2 Argentina", "url": "http://www.road2argentina.com/", "id": 27 },
+    { "name": "Transitions Abroad", "url": "http://www.transitionsabroad.com/", "id": 28 },
+    { "name": "Maximo Nivel", "url": "https://maximonivel.com/", "id": 29 },
+    { "name": "IVHQ", "url": "https://www.volunteerhq.org/", "id": 30 }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "organization_id": 1,
+      "country":"South Africa",
+      "state": "KwaZulu-Natal",
+      "city": "St Lucia"
+    },
+    {
+      "organization_id": 2,
+      "country": "Brazil",
+      "state": "Sao Paulo",
+      "city": "Sao Paulo"
+    },
+    {
+      "organization_id": 3,
+      "country": "Thailand",
+      "state": "Chiang Mai Province",
+      "city": "Chiang Mai"
+    },
+    {
+      "organization_id": 4,
+      "country": "Thailand",
+      "state": "Chiang Mai Province",
+      "city": "Chiang Mai"
+    },
+    {
+      "organization_id": 5,
+      "country": "China",
+      "state": "Beijing",
+      "city": "Beijing"
+    },
+    {
+      "organization_id": 6,
+      "country": "Belgium'",
+      "state": "Bilzen",
+      "city": "Tongeren"
+    },
+    {
+      "organization_id": 7,
+      "country": "Cambodia",
+      "state": "Phnom Penh",
+      "city": "Phnom Penh"
+    },
+    {
+      "organization_id": 8,
+      "country": "Colombia",
+      "state": "Cundinamarca",
+      "city": "Bogota"
+    },
+    {
+      "organization_id": 9,
+      "country": "Dominican Republic",
+      "state": "Distrito Nacional",
+      "city": "Santo Domingo"
+    },
+    {
+      "organization_id": 10,
+      "country": "France",
+      "state": "Paris",
+      "city": "Paris"
+    },
+    {
+      "organization_id": 11,
+      "country": "Germany",
+      "state": "Brandenburg",
+      "city": "Beeskow"
+    },
+    {
+      "organization_id": 12,
+      "country": "Iceland",
+      "state": "Reykjavík",
+      "city": "Reykjavík"
+    },
+    {
+      "organization_id": 13,
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "Mumbai"
+    },
+    {
+      "organization_id": 14,
+      "country": "Iraq",
+      "state": "Salah ad Din",
+      "city": "Ad-Dawr"
+    },
+    {
+      "organization_id": 15,
+      "country": "Brazil",
+      "state": "Sao Paulo",
+      "city": "Sao Paulo"
+    },
+    {
+      "organization_id": 16,
+      "country": "Japan",
+      "state": "Aichi",
+      "city": "kazaki"
+    },
+    {
+      "organization_id": 17,
+      "country": "Jordan",
+      "state": "Amman",
+      "city": "Amman"
+    },
+    {
+      "organization_id": 18,
+      "country": "Kenya",
+      "state": "Baragoi",
+      "city": "Baragoi"
+    },
+    {
+      "organization_id": 19,
+      "country": "Lebanon",
+      "state": "Beirut Governorate",
+      "city": "Beirut"
+    },
+    {
+      "organization_id": 20,
+      "country": "Myanmar",
+      "state": "Yangon Region",
+      "city": "Yangon"
+    },
+    {
+      "organization_id": 21,
+      "country": "Nepal",
+      "state": "Kathmandu",
+      "city": "Kathmandu"
+    },
+    {
+      "organization_id": 22,
+      "country": "New Zealand",
+      "state": "Greater Wellington Regional",
+      "city": "Auckland"
+    },
+    {
+      "organization_id": 23,
+      "country": "North Korea",
+      "state": "South Pyongan",
+      "city": "Anju"
+    },
+    {
+      "organization_id": 24,
+      "country": "Norway",
+      "state": "Aust-Agder",
+      "city": "Arendal"
+    },
+    {
+      "organization_id": 25,
+      "country": "Pakistan",
+      "state": "Mardan",
+      "city": "Mardan"
+    },
+    {
+      "organization_id": 26,
+      "country": "Peru",
+      "state": "Lima",
+      "city": "Lima"
+    },
+    {
+      "organization_id": 27,
+      "country": "Philippines",
+      "state": "Pangasinan",
+      "city": "Alaminos"
+    },
+    {
+      "organization_id": 28,
+      "country": "Romania",
+      "state": "Cluj",
+      "city": "Cluj-Napoca"
+    },
+    {
+      "organization_id": 29,
+      "country": "Sweden",
+      "state": "Alingsas",
+      "city": "Alingsas"
+    },
+    {
+      "organization_id": 30,
+      "country": "Uzbekistan",
+      "state": "Afrasiab",
+      "city": "Afrasiab"
+    }
+  ]
+}
