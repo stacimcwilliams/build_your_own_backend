@@ -6,7 +6,7 @@ const enviroment = process.env.NODE_ENV || 'development';
 const configuration = require('./knexfile')[enviroment];
 const database = require('knex')(configuration);
 
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Go Global';
 
 app.use(bodyParser.json());
@@ -14,16 +14,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //get all the organizations
 app.get('/api/v1/organizations', (request, response) => {
-  const org = request.query.org
+  const org = request.query.org;
 
   if(!org) {
     database('organizations').select()
     .then(organizations => response.status(200).json(organizations))
-    .catch(err => response.status(404).send('Organizations could not be loaded'))
+    .catch(err => response.status(404).send('Organizations could not be loaded'));
   } else {
     database('organizations').where('id', org).select()
     .then(organization => response.status(200).json(organization))
-    .catch(err => response.status(404).send('That id is not here'))
+    .catch(err => response.status(404).send('That id is not here'));
   }
 });
 //get the locations
@@ -76,7 +76,7 @@ app.post('/api/v1/locations', (request, response) => {
     .then(location => response.status(201).json(location[0]))
     .catch(error => response.sendStatus(422));
   } else {
-    response.sendStatus(422)
+    response.sendStatus(422);
   }
 });
 

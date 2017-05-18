@@ -1,7 +1,7 @@
 module.exports = {
   test: {
    client: 'pg',
-   connection: process.env.DATABASE_URL || 'postgres://localhost/go_global',
+   connection: process.env.DATABASE_URL || 'postgres://localhost/go_global_test',
    migrations: {
      directory: __dirname + '/db/migrations'
    },

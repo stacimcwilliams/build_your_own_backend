@@ -4,7 +4,7 @@
   "description": "A back end for finding international volunteer oppurtunities",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha ./tests/**.js || true",
+    "test": "node_modules/.bin/mocha ./tests/**.js",
     "start": "node server.js"
   },
   "keywords": [],
@@ -18,8 +18,11 @@
     "pg": "^6.2.2"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.4.1"
   }
 }
