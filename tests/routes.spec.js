@@ -172,5 +172,49 @@ describe('Go Global server testing', () => {
         });
       });
     });
+
+    describe('DELETE /api/v1/locations/:id', () => {
+      it('should be able to delete a location', (done) => {
+        chai.request(server)
+        .get('/api/v1/locations/')
+        .end((error, response) => {
+          response.body.length.should.equal(30)
+          chai.request(server)
+          .delete('api/v1/locations/2')
+          .set('Authorization', process.env.TOKEN)
+          .end((error, response) => {
+            response.should.have.status(204);
+            chai.request(server)
+            .get('/api/v1/locations')
+            .end((error, response) => {
+              response.body.length.should.equal(29);
+            });
+          });
+          done();
+        });
+      });
+    });
+
+    describe('DELETE /api/v1/organizations/:id', () => {
+      it('should be able to delete a organization', (done) => {
+        chai.request(server)
+        .get('/api/v1/organizations/')
+        .end((error, response) => {
+          response.body.length.should.equal(30)
+          chai.request(server)
+          .delete('api/v1/organizations/2')
+          .set('Authorization', process.env.TOKEN)
+          .end((error, response) => {
+            response.should.have.status(204);
+            chai.request(server)
+            .get('/api/v1/organizations')
+            .end((error, response) => {
+              response.body.length.should.equal(29);
+            });
+          });
+          done();
+        });
+      });
+    });
   });
 });

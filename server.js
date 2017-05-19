@@ -128,7 +128,7 @@ app.delete('/api/v1/organizations/:id', checkAuth, (request, response) => {
     .then(() => {
       database('organizations').select()
       .then((organizations) => {
-        response.status(200).json(organizations);
+        response.status(204).json(organizations);
       })
       .catch((error) => {
         console.error('Cannot delete organization', error);
@@ -141,14 +141,11 @@ app.delete('/api/v1/organizations/:id', checkAuth, (request, response) => {
 // delete a location
 app.delete('/api/v1/locations/:id', checkAuth, (request, response) => {
   const { id } = request.params;
-
-  // database('locations').where('organization_id', id).update({ organization_id: null })
-  // .then(() => {
   database('locations').where('id', id).del()
   .then(() => {
     database('locations').select()
     .then((locations) => {
-      response.status(200).json(locations);
+      response.status(204).json(locations);
     })
     .catch((error) => {
       console.error('Cannot delete location', error);
