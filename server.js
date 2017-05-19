@@ -154,7 +154,7 @@ app.delete('/api/v1/locations/:id', checkAuth, (request, response) => {
 });
 
 // put request to edit all of the request
-app.put('/api/v1/organizations/:id/replace', (request, response) => {
+app.put('/api/v1/organizations/:id/replace', checkAuth, (request, response) => {
   database('organizations').where('id', request.params.id)
   .update({
     name: request.body.name,
