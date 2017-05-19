@@ -120,6 +120,24 @@ describe('Go Global server testing', () => {
           done();
         });
       });
+
+      it('should return status 404 when no organizations match', (done) => {
+        chai.request(server)
+        .get('/api/v1/organziations/593s')
+        .end((error, response) => {
+          response.should.have.status(404);
+          done();
+        });
+      });
+
+      it('should return status 404 when no locations match', (done) => {
+        chai.request(server)
+        .get('/api/v1/organziations/964f')
+        .end((error, response) => {
+          response.should.have.status(404);
+          done();
+        });
+      });
     });
 
     describe('PATCH /api/v1/organizations/:id/edit', () => {
@@ -178,7 +196,7 @@ describe('Go Global server testing', () => {
         chai.request(server)
         .get('/api/v1/locations/')
         .end((error, response) => {
-          response.body.length.should.equal(30)
+          response.body.length.should.equal(30);
           chai.request(server)
           .delete('api/v1/locations/2')
           .set('Authorization', process.env.TOKEN)
@@ -200,7 +218,7 @@ describe('Go Global server testing', () => {
         chai.request(server)
         .get('/api/v1/organizations/')
         .end((error, response) => {
-          response.body.length.should.equal(30)
+          response.body.length.should.equal(30);
           chai.request(server)
           .delete('api/v1/organizations/2')
           .set('Authorization', process.env.TOKEN)
@@ -215,6 +233,22 @@ describe('Go Global server testing', () => {
           done();
         });
       });
+    });
+
+    describe('POST /api/v1/locations', () => {
+      it('should not create a record with data missing', (done) => {
+        chai.request(server)
+          .post('api/v1/locations')
+          .set('Authorization', process.env.TOKEN)
+          .send({
+            country: "Thailand",
+          })
+          .end((error, response) => {
+            response.should.have.status(422);
+          });
+        done();
+      });
+
     });
   });
 });

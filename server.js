@@ -68,21 +68,21 @@ app.get('/api/v1/organizations', (request, response) => {
 app.get('/api/v1/locations', (request, response) => {
   database('locations').select()
   .then(locations => response.status(200).json(locations))
-  .catch(error => response.sendStatus(500));
+  .catch(error => response.sendStatus(500).send('Internal Server Error'));
 });
 
 // get organization by id
 app.get('/api/v1/organizations/:organization_id', (request, response) => {
   database('organizations').where('id', request.params.organization_id).select()
   .then(organizations => response.status(200).json(organizations))
-  .catch(error => response.sendStatus(404));
+  .catch(error => response.sendStatus(404).send('No organizations match'));
 });
 
 // get a location by id
 app.get('/api/v1/locations/:location_id', (request, response) => {
   database('locations').where('id', request.params.location_id).select()
   .then(location => response.status(200).json(location))
-  .catch(error => response.sendStatus(404));
+  .catch(error => response.sendStatus(404).send('No locations match'));
 });
 
 // add an organization
