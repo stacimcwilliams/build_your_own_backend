@@ -49,8 +49,6 @@ const checkAuth = (request, response, next) => {
     });
   }
 };
-//
-// app.use(checkAuth)
 
 // get all the organizations
 app.get('/api/v1/organizations', (request, response) => {
@@ -140,6 +138,7 @@ app.delete('/api/v1/organizations/:id', checkAuth, (request, response) => {
   });
 });
 
+// delete a location
 app.delete('/api/v1/locations/:id', checkAuth, (request, response) => {
   const { id } = request.params;
 
@@ -158,10 +157,34 @@ app.delete('/api/v1/locations/:id', checkAuth, (request, response) => {
   });
 });
 
-// Put request to edit an organization
-app.patch('api/v1/locations/:id', checkAuth, (request, response) => {
-  
-})
+// put request to edit all of the request
+app.put('/api/v1/organizations/:id/replace', (request, response) => {
+  database('organizations').where('id', request.params.id)
+  .update({
+    name: request.body.name,
+    url: request.body.url,
+  })
+  .then(() => {
+    database('organizations').select()
+    .then((organizations) => {
+      response.status(200).json(organizations);
+    });
+  });
+});
+
+// edit an organizations name
+app.patch('/api/v1/organizations/:id/edit', checkAuth, (request, response) => {
+  database('organizations').where('id', request.params.id)
+  .update({
+    name: request.body.name,
+  })
+  .then(() => {
+    database('organizations').select()
+    .then((organizations) => {
+      response.status(200).json(organizations);
+    });
+  });
+});
 
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);
