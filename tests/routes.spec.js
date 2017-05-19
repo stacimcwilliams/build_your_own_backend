@@ -111,6 +111,23 @@ describe('Go Global server testing', () => {
       });
     });
 
+    describe('POST /api/v1/locations/', () => {
+      it('should not add an location if not authorized', (done) => {
+        chai.request(server)
+        .post('/api/v1/locations')
+        .send({
+          country: "Costa Rica",
+          state: "San Jose",
+          city: "San Jose",
+        })
+        .end((error, response) => {
+          response.should.have.status(403);
+          response.body.should.be.a('object');
+          done();
+        });
+      });
+    });
+
     describe('Sad Route', () => {
       it('should return a 404 for a sad route', (done) => {
         chai.request(server)
@@ -238,14 +255,14 @@ describe('Go Global server testing', () => {
     describe('POST /api/v1/locations', () => {
       it('should not create a record with data missing', (done) => {
         chai.request(server)
-          .post('api/v1/locations')
-          .set('Authorization', process.env.TOKEN)
-          .send({
-            country: "Thailand",
-          })
-          .end((error, response) => {
-            response.should.have.status(422);
-          });
+        .post('api/v1/locations')
+        .set('Authorization', process.env.TOKEN)
+        .send({
+          country: "Thailand",
+        })
+        .end((error, response) => {
+          response.should.have.status(422);
+        });
         done();
       });
 

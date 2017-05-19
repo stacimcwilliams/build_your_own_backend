@@ -95,11 +95,10 @@ app.post('/api/v1/organizations', checkAuth, (request, response) => {
   .then(() => {
     database('organizations').select()
     .then((organizations) => {
-      response.status(200).json(organizations);
+      return response.status(200).json(organizations);
     })
     .catch(error => {
-      console.log('Could not add organization', error);
-      response.status(422).send('Please enter a name and url for the organization');
+      return response.status(422).send('Please enter a name and url for the organization');
     });
   });
 });
@@ -114,7 +113,7 @@ app.post('/api/v1/locations', checkAuth, (request, response) => {
     .then(location => response.status(201).json(location[0]))
     .catch(error => response.sendStatus(422));
   } else {
-    response.sendStatus(422);
+    return response.sendStatus(422);
   }
 });
 
@@ -128,11 +127,11 @@ app.delete('/api/v1/organizations/:id', checkAuth, (request, response) => {
     .then(() => {
       database('organizations').select()
       .then((organizations) => {
-        response.status(204).json(organizations);
+        return response.status(204).json(organizations);
       })
       .catch((error) => {
         console.error('Cannot delete organization', error);
-        response.status(422).send('Cannot delete this organization');
+        return response.status(422).send('Cannot delete this organization');
       });
     });
   });
@@ -145,11 +144,11 @@ app.delete('/api/v1/locations/:id', checkAuth, (request, response) => {
   .then(() => {
     database('locations').select()
     .then((locations) => {
-      response.status(204).json(locations);
+      return response.status(204).json(locations);
     })
     .catch((error) => {
       console.error('Cannot delete location', error);
-      response.status(422).send('Cannot delete this location');
+      return response.status(422).send('Cannot delete this location');
     });
   });
 });
@@ -164,7 +163,7 @@ app.put('/api/v1/organizations/:id/replace', (request, response) => {
   .then(() => {
     database('organizations').select()
     .then((organizations) => {
-      response.status(200).json(organizations);
+      return response.status(200).json(organizations);
     });
   });
 });
@@ -178,7 +177,7 @@ app.patch('/api/v1/organizations/:id/edit', checkAuth, (request, response) => {
   .then(() => {
     database('organizations').select()
     .then((organizations) => {
-      response.status(200).json(organizations);
+      return response.status(200).json(organizations);
     });
   });
 });
