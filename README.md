@@ -1,0 +1,5 @@
+Practice makes practice. Last week’s project had you dive head first into a full-stack application with Node, Express, Knex, and a front-end to boot. That was a lot thrown at you in one week so this time around we are going to focus solely on the backend.
+
+The main focus of this project will be to reinforce your understanding of CRUD methods, querying a database, and responding with JSON data. You can do this project right now, without any new lessons.
+
+The secondary focus of this project is prepping your Capstone project so you have data ready to go and can dive into building a super badass UI instead of wasting a week in Node land. It’s not necessary that you find perfect data for your Capstone, but it’s vital that you know how to setup production APIs that are well tested. You can easily replace the source of your data, so don’t worry if you can’t come up with a good data source or if you have no idea what you want to build for the Capstone. Find or create interesting data that you might want to use in the future.
