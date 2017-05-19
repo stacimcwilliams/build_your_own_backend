@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha ./tests/**.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "./node_modules/.bin/eslint ./"
   },
   "keywords": [],
   "author": "Staci McWilliams",
@@ -29,3 +30,4 @@
     "mocha": "^3.4.1"
   }
 }
+// npm run lint for linter 
