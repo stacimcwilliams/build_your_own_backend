@@ -166,8 +166,8 @@ describe('Go Global server testing', () => {
             response.should.have.status(200);
             response.body.name.should.equal("Change this entire org");
             response.body.url.should.equal("http://www.neworg.com");
-            response.body.id.should.equal(3)
-          })
+            response.body.id.should.equal(3);
+          });
           done();
         });
       });
