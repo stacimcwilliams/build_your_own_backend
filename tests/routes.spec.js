@@ -128,19 +128,10 @@ describe('Go Global server testing', () => {
       });
     });
 
-    describe('Sad Route', () => {
-      it('should return a 404 for a sad route', (done) => {
-        chai.request(server)
-        .get('/api/v1/organizations/sad')
-        .end((err, response) => {
-          response.should.have.status(404);
-          done();
-        });
-      });
-
+    describe('Sad Routes', () => {
       it('should return status 404 when no organizations match', (done) => {
         chai.request(server)
-        .get('/api/v1/organziations/593s')
+        .get('/api/v1/organziations/sad')
         .end((error, response) => {
           response.should.have.status(404);
           done();
