@@ -111,13 +111,63 @@ describe('Go Global server testing', () => {
       });
     });
 
-
     describe('Sad Route', () => {
       it('should return a 404 for a sad route', (done) => {
         chai.request(server)
         .get('/api/v1/organizations/sad')
         .end((err, response) => {
           response.should.have.status(404);
+          done();
+        });
+      });
+    });
+
+    describe('PATCH /api/v1/organizations/:id/edit', () => {
+      it('should be able to PATCH a specific organization', (done) => {
+        chai.request(server)
+        .get('/api/v1/organizations/1')
+        .set('Authorization', process.env.TOKEN)
+        .end((error, response) => {
+          response.body[0].should.have.property('name');
+          response.body[0].name.should.equal('Go Eco');
+          response.body[0].id.should.equal(1);
+          chai.request(server)
+          .patch('api/v1/organizations/1/edit')
+          .set('Authorization', process.env.TOKEN)
+          .send({
+            name: 'Changing name to Go Go Eco',
+          })
+          .end((error, response) => {
+            response.should.have.status(200);
+            response.body.name.should.equal('Changing name to Go Go Eco');
+            response.body.id.should.equal(1);
+          });
+          done();
+        });
+      });
+    });
+
+    describe('PUT /api/v1/organizations/:id/replace', () => {
+      it('should be able to PUT a specific organization', (done) => {
+        chai.request(server)
+        .get('/api/v1/organizations/3')
+        .set('Authorization', process.env.TOKEN)
+        .end((error, response) => {
+          response.body[0].should.have.property('name');
+          response.body[0].name.should.equal('One World 365');
+          chai.request(server)
+          .put('api/v1/organizations/3/replace')
+          .set('Authorization', process.env.TOKEN)
+          .send({
+            name: "Change this entire org",
+            url: "http://www.neworg.com",
+          })
+          .end((error, response) => {
+            response.should.have.status(200);
+            response.body.name.should.equal("Change this entire org");
+            response.body.url.should.equal("http://www.neworg.com");
+            response.body.id.should.equal(3)
+          })
           done();
         });
       });
